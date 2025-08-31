@@ -23,9 +23,6 @@ echo [5/5] Applying Performance Tweaks...
 :: Set Network Profile to Private for lower discovery latency (change to Public for stricter security)
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles" /v "Category" /t REG_DWORD /d 1 /f >nul
 
-:: Favor performance over appearance
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v "VisualFXSetting" /t REG_DWORD /d 2 /f >nul
-
 echo.
 echo ** SYSTEM DEBLOAT COMPLETE. **
 echo A reboot is required for all changes to take effect.
